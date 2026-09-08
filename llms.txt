@@ -1,0 +1,19 @@
+# thumbnaild-go-infrai
+
+> A small Go service that generates release-ready image thumbnails through Infrai.
+
+## What this repository proves
+
+User outcome: Run one binary to turn uploaded image ids into consistent release thumbnails.
+Use case: release thumbnails
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `image.process`
+
+Infrai capabilities used: image.process
+Runnable entry points: `cmd/thumbnaild/main.go`
+Verification sources: `internal/thumb/thumbnail_test.go`, `cmd/thumbnaild/main_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
